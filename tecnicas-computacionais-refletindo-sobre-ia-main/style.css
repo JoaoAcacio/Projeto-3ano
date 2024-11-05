@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root { /*itens que estão dentro do root podem ser utilizados dentro de todo o css*/
+    --cor-fundo: #01080E;/*variavel*/
+    --cor-principal: #0B0D20 ;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+}
+  
+body {/*configurações do corpo da pagina*/
+    background-color: var(--cor-fundo);/*cor do fundo*/
+    color: var(--cor-texto);/*cor do texto*/
+    font-family: 'Inter', sans-serif;/*tipo de fonte*/
+    display: flex;/* estilo de display, um ao lado do outro*/
+    justify-content: center; /*define como o nevegador define os espaçamento entre os elementos dentro do flex*/
+    align-items: center; /*alinha os itens dentro do flex*/
+    min-height: 100vh; /*temanho minimo*/
+}
+
+.caixa-principal{ /*configurações da caixa principal*/
+    background-color: var(--cor-principal); /*cor do fundo*/
+    width: 90%; /*lagura proporcional*/
+    max-width: 600px; /*largura maxima*/
+    text-align: center; /*alinha o texto*/
+    padding: 20px; /*espaçamento interno*/
+}
+
+h1, .caixa-perguntas, .caixa-resultado{ /*configurações do titulo 1, da caixa de perguntas e da caixa de resultados*/
+    font-family: 'Chakra Petch', sans-serif;/*fonte do texto*/
+}
+
+h1 { /*configurações do titulo 1*/
+    color: var(--cor-destaque); /*cor do texto*/
+}
+
+button { /*configurações do botão*/
+    background-color: var(--cor-secundaria); /*cor de fundo do botão*/
+    color: var(--cor-texto); /*cor do texto do botão*/
+    border: none; /*bordas em volta do botão*/
+    border-radius: 15px; /*area das bordas*/
+    padding: 15px; /*espaçamento interno*/
+    transition: background-color 0.3s; /*alteração de cor do funto durante transição*/
+}
+
+button:hover { /*destaque do botão caso o ponteiro do mouse esteja em cima dele*/
+    background-color: var(--cor-destaque); /*cor do fundo*/
+    color: var(--cor-principal); /*cor do texto*/
+}
+
+.caixa-resultado{ /*configurações do resultado*/
+    display: none;/*faz com que o resultado fique escondido ate o fim*/
+}
+
+.caixa-resultado.mostrar{ /*mostra o resultado */
+    display: block; /*faz com que o resultado apareça em bloco*/
+}
+
+.caixa-alternativas{ /*configurações das alternativas*/
+    display: flex; /*estilo do display*/
+    flex-direction: column; /*direção do alinhamento*/
+    gap: 10px;/*espaçamento entre um item e outro*/
+}
